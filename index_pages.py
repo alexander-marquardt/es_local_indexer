@@ -1,11 +1,10 @@
 #!/usr/bin/python
 
 import os, re
-import globals
+import globals, common
 from elasticsearch import Elasticsearch
 
-# Beautiful Soup is a library for parsing html
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup # library for parsing html
 from bs4.element import Comment
 
 es = Elasticsearch([globals.ES_HOST], http_auth=(globals.ES_USER, globals.ES_PASSWORD))
@@ -41,24 +40,28 @@ def extract_fields_from_html(body):
     }
 
 
-# traverse root directory, and list directories as dirs and files as files
-for root, dirs, files in os.walk("."):
-    path = root.split(os.sep)
-    for file in files:
-        if file.endswith(".html"):
-            abs_path = os.path.join(os.path.abspath(root), file)
-            print("indexing %s" % abs_path)
+def main(parsed_args):
+    # traverse root directory, and list directories as dirs and files as files
+    base_dir = parsed_args.path
+    for root, dirs, files in os.walk(base_dir):
+        for file in files:
+            if file.endswith(".html"):
+                rel_dir = os.path.relpath(root, base_dir)
+                rel_file = os.path.join(rel_dir, file)
+                print("indexing %s" % rel_file)
 
-            infile = open(abs_path)
-            html_from_file = infile.read()
-            json_to_index = extract_fields_from_html(html_from_file)
-            json_to_index['abs_path'] = abs_path
-            es.index(index=globals.INDEX_NAME, doc_type='doc', id=None,
-                     body=json_to_index)
+                abs_file_path = os.path.join(base_dir, rel_file)
+                infile = open(abs_file_path)
+                html_from_file = infile.read()
+                json_to_index = extract_fields_from_html(html_from_file)
+                json_to_index['rel_file'] = rel_file
+                es.index(index=globals.INDEX_NAME, id=None,
+                         body=json_to_index)
 
 
-
-
+if __name__ == '__main__':
+    parsed_args = common.initial_setup()
+    main(parsed_args)
 
 
 
