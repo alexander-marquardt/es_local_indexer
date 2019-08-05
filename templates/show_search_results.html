@@ -9,7 +9,7 @@
             {% if page._source.title %}
             <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
             {% if page.highlight.title %}
-                {{ page.highlight.title|safe }}
+                {{ page.highlight.title.0|safe }}
             {% else %}
                 {{ page._source.title }}
             {% endif %}
@@ -19,14 +19,14 @@
 
             <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
                 {% if page.highlight.rel_file %}
-                    {{ page.highlight.rel_file|safe }}
+                    {{ page.highlight.rel_file.0|safe }}
                 {% else %}
                     {{ page._source.rel_file }}
                 {% endif %}
             </a><br>
 
             {% if page.highlight.content %}
-                <p>{{ page.highlight.content | safe }}</p>
+                <p>{{ page.highlight.content | join('... ') | safe }}</p>
             {% else %}
                 <p>{{ page._source.content|truncate(240) }}</p>
             {% endif %}

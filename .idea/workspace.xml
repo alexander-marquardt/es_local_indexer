@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_body.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search_body.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="101" column="18" lean-forward="true" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+            <state relative-caret-position="390">
+              <caret line="111" column="23" lean-forward="true" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -56,8 +56,8 @@
       <file leaf-file-name="templating.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/venv/lib/python3.6/site-packages/flask/templating.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
+            <state relative-caret-position="-3">
+              <caret line="129" column="57" lean-forward="true" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_search_results.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_search_results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/show_search_results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="184">
+              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -157,10 +157,10 @@
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.txt" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/home_page.html" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/search_box.html" />
-        <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/simple_search.py" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/presentation.py" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/show_search_results.html" />
+        <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json" />
       </list>
     </option>
   </component>
@@ -436,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/venv/lib/python3.6/site-packages/flask/templating.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -462,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="101" column="18" lean-forward="true" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/simple_search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -476,6 +462,13 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/venv/lib/python3.6/site-packages/flask/templating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="129" column="57" lean-forward="true" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -491,8 +484,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/show_search_results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="184">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="111" column="23" lean-forward="true" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
         </state>
       </provider>
     </entry>

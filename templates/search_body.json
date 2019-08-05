@@ -103,9 +103,9 @@
       "</b>"
     ],
     "fields": {
-      "content": {},
-      "title": {},
-      "rel_file": {}
+      "content": {"number_of_fragments" : 5},
+      "title": {"number_of_fragments" : 0},
+      "rel_file": {"number_of_fragments" : 0}
     }
   },
   "sort": [
