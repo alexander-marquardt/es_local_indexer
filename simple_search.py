@@ -1,10 +1,14 @@
+import os
+
 from flask import Flask, request
 from elasticsearch import Elasticsearch
 
-import globals, presentation, common
+import globals
+import presentation
+import common
 
-app = Flask(__name__)
 es = Elasticsearch([globals.ES_HOST], http_auth=(globals.ES_USER, globals.ES_PASSWORD))
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -33,16 +37,22 @@ def my_form_post():
     return generated_html
 
 
-@app.route('/offlinesearch/display')
-def open_file():
+@app.route('/offline_search/display/<path:relative_path>')
+def open_file(relative_path):
 
-    # get the value of abs_path (i.e. ?abs_path=some-value)
-    abs_path = request.args.get('abs_path')
-    infile = open(abs_path)
+    full_path = os.path.join(app.config['input_files_root'], relative_path)
+    infile = open(full_path)
     html_from_file = infile.read()
     return html_from_file
 
 
-if __name__ == '__main__':
+def configure_global_app():
     parsed_args = common.initial_setup()
+    app.config['input_files_root'] = parsed_args.path
+    print('Files root: ', app.config['input_files_root'])
+    return
+
+
+if __name__ == '__main__':
+    configure_global_app()
     app.run()

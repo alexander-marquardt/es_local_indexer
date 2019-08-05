@@ -7,5 +7,5 @@ def present_results(list_of_results):
     list_of_results -- the hits from the search
     """
 
-    generated_html = render_template('index.html', pages=list_of_results)
+    generated_html = render_template('show_search_results.html', pages=list_of_results)
     return generated_html
