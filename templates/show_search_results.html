@@ -4,8 +4,15 @@
     </head>
     <body>
         {% for page in pages %}
-            {% if page._source.title %}<div><h3>{{ page._source.title }}</h3></div>{% endif %}
-            <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }}>{{ page._source.rel_file }}</a>
+            {% if page._source.title %}
+            <h3>
+                <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
+                    {{ page._source.title }}
+                </a>
+            </h3>{% endif %}
+            <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
+                {{ page._source.rel_file }}
+            </a>
         {% endfor %}
     </body>
 </html>
