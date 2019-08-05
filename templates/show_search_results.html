@@ -5,14 +5,32 @@
     <body>
         {% for page in pages %}
             {% if page._source.title %}
-            <h3>
+            <b>
                 <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
+                {% if page.highlight.title %}
+                    {{ page.highlight.title|safe }}
+                {% else %}
                     {{ page._source.title }}
+                {% endif %}
                 </a>
-            </h3>{% endif %}
+            </b><br>
+            {% endif %}
+
             <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
-                {{ page._source.rel_file }}
-            </a>
+                {% if page.highlight.rel_file %}
+                    {{ page.highlight.rel_file|safe }}
+                {% else %}
+                    {{ page._source.rel_file }}
+                {% endif %}
+            </a><br>
+
+            {% if page.highlight.content %}
+                <p>{{ page.highlight.content | safe }}</p>
+            {% else %}
+                <p>{{ page._source.content|truncate(240) }}</p>
+            {% endif %}
+            <br>
+
         {% endfor %}
     </body>
 </html>
