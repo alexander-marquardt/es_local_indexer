@@ -1,0 +1,112 @@
+{
+  "from": 0,
+  "size": 10,
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match_phrase": {
+            "title": {
+              "query": "{{query_string}}",
+              "boost": 1,
+              "_name": "title-phrase"
+            }
+          }
+        },
+        {
+          "match_phrase": {
+            "rel_file": {
+              "query": "{{query_string}}",
+              "boost": 1,
+              "_name": "rel_file-phrase"
+            }
+          }
+        },
+        {
+          "match_phrase": {
+            "content": {
+              "query": "{{query_string}}",
+              "boost": 1,
+              "_name": "content-phrase"
+            }
+          }
+        },
+        {
+          "match": {
+            "title": {
+              "query": "{{query_string}}",
+              "operator": "and",
+              "boost": 1,
+              "_name": "title-and"
+            }
+          }
+        },
+        {
+          "match": {
+            "content": {
+              "query": "{{query_string}}",
+              "operator": "and",
+              "boost": 1,
+              "_name": "content-and"
+            }
+          }
+        },
+        {
+          "match": {
+            "rel_file": {
+              "query": "{{query_string}}",
+              "operator": "and",
+              "boost": 1,
+              "_name": "rel_file-and"
+            }
+          }
+        },
+        {
+          "match": {
+            "title": {
+              "query": "{{query_string}}",
+              "operator": "or",
+              "boost": 1,
+              "_name": "title-or"
+            }
+          }
+        },
+        {
+          "match": {
+            "content": {
+              "query": "{{query_string}}",
+              "operator": "or",
+              "boost": 1,
+              "_name": "content-or"
+            }
+          }
+        },
+        {
+          "match": {
+            "rel_file": {
+              "query": "{{query_string}}",
+              "operator": "or",
+              "boost": 1,
+              "_name": "rel_file-or"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "require_field_match": false,
+    "pre_tags": [
+      "<b>"
+    ],
+    "post_tags": [
+      "</b>"
+    ],
+    "fields": {
+      "content": {},
+      "title": {},
+      "rel_file": {}
+    }
+  }
+}
+

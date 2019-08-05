@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 from elasticsearch import Elasticsearch
 
 import globals
@@ -26,13 +26,8 @@ def my_form():
 def my_form_post():
     search_text = request.form['text'].lower()
 
-    body = {
-        "id": "search_es_docs_template",
-        "params": {
-            "query_string": search_text
-        }
-    }
-    search_result = es.search_template(index=globals.INDEX_NAME, body=body)
+    body = render_template("search_body.json", query_string=search_text)
+    search_result = es.search(index=globals.INDEX_NAME, body=body)
     generated_html=presentation.present_results(search_result['hits']['hits'])
     return generated_html
 
