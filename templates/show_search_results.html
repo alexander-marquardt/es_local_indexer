@@ -3,17 +3,18 @@
         <title>Search results</title>
     </head>
     <body>
+        {% include 'search_box.html' %}
         {% for page in pages %}
+            <h3>
             {% if page._source.title %}
-            <b>
-                <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
-                {% if page.highlight.title %}
-                    {{ page.highlight.title|safe }}
-                {% else %}
-                    {{ page._source.title }}
-                {% endif %}
-                </a>
-            </b><br>
+            <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
+            {% if page.highlight.title %}
+                {{ page.highlight.title|safe }}
+            {% else %}
+                {{ page._source.title }}
+            {% endif %}
+            </a>
+            </h3>
             {% endif %}
 
             <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
@@ -31,6 +32,10 @@
             {% endif %}
             <br>
 
+            {% if loop.last %}
+                <p>Last URL is : {{ page._source.rel_file }} </p>
+            {% endif %}
         {% endfor %}
+
     </body>
 </html>

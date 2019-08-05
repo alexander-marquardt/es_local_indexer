@@ -13,22 +13,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def my_form():
-    return """
-    <div>Search in %s index for: </div>
-    <div><form method="POST">
-        <input name="text">
-        <input type="submit">
-    </form></div>
-    """ % globals.INDEX_NAME
+    return presentation.show_home_page(search_text='', input_files_root=app.config['input_files_root'])
 
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    search_text = request.form['text'].lower()
+    search_text = request.form['search_text'].lower()
 
     body = render_template("search_body.json", query_string=search_text)
     search_result = es.search(index=globals.INDEX_NAME, body=body)
-    generated_html=presentation.present_results(search_result['hits']['hits'])
+    generated_html = presentation.present_results(
+        search_text=search_text,
+        input_files_root=app.config['input_files_root'],
+        list_of_results=search_result['hits']['hits'])
+
     return generated_html
 
 

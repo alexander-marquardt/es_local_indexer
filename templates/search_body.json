@@ -107,6 +107,10 @@
       "title": {},
       "rel_file": {}
     }
-  }
+  },
+  "sort": [
+    {"_score": "desc"},
+    {"rel_file.keyword": "asc"}
+  ]
 }
 
