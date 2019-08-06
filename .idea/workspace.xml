@@ -11,11 +11,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="globals.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/globals.py">
+      <file leaf-file-name="index_pages_app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index_pages_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="285">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding>
+                <element signature="e#19#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,15 +28,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1545">
               <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -85,11 +79,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+            <state relative-caret-position="189">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/helpers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="765" column="38" selection-start-line="765" selection-start-column="30" selection-end-line="765" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -171,12 +177,13 @@
         <option value="$PROJECT_DIR$/simple_search.py" />
         <option value="$PROJECT_DIR$/templates/show_search_results.html" />
         <option value="$PROJECT_DIR$/search_app.py" />
+        <option value="$PROJECT_DIR$/index_pages_app.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="111" />
-    <option name="y" value="23" />
+    <option name="x" value="51" />
+    <option name="y" value="28" />
     <option name="width" value="1187" />
     <option name="height" value="845" />
   </component>
@@ -259,7 +266,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search_app.py" />
-      <option name="PARAMETERS" value="-p $USER_HOME$/Downloads/python-3.7.4-docs-html -i python_docs" />
+      <option name="PARAMETERS" value="-p $USER_HOME$/Documents/elastic-github/built-docs -i built_docs" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -289,7 +296,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="111" y="23" width="1187" height="845" extended-state="0" />
+    <frame x="51" y="28" width="1187" height="845" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2555746" />
@@ -297,11 +304,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3435829" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3435829" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39973262" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -321,16 +328,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="abs_path" />
+        <watch expression="app.config['input_files_root']" language="Python" />
+        <watch expression="filename" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>filename</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>app.config['input_files_root']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>soup.title.contents</expression-string>
         <language-id>Python</language-id>
@@ -438,6 +456,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -520,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_pages_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="49" column="31" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="e#19#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -604,10 +615,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="765" column="38" selection-start-line="765" selection-start-column="30" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/search_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+        <state relative-caret-position="189">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_pages_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="e#19#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
