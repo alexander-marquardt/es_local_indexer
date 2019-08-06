@@ -20,7 +20,17 @@ def my_form():
 def my_form_post():
     search_text = request.form['search_text'].lower()
 
-    body = render_template("search_body.json", query_string=search_text)
+    try:
+        last_score = request.form['last_score']
+        last_id = request.form['last_id']
+        optional_search_after = '"search_after": [%s, "%s"],' % (last_score, last_id)
+    except:
+        optional_search_after = ''
+
+    body = render_template("search_body.json",
+                           query_string=search_text,
+                           optional_search_after=optional_search_after)
+    print(body)
     search_result = es.search(index=globals.INDEX_NAME, body=body)
     generated_html = presentation.present_results(
         search_text=search_text,

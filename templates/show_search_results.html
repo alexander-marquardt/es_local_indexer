@@ -30,10 +30,11 @@
             {% else %}
                 <p>{{ page._source.content|truncate(240) }}</p>
             {% endif %}
+            <p><em>score={{ page._score }}</em></p>
             <br>
 
             {% if loop.last %}
-                <p>Last URL is : {{ page._source.rel_file }} </p>
+               {% include 'next_button.html' %}
             {% endif %}
         {% endfor %}
 

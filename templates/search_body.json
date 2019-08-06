@@ -108,9 +108,10 @@
       "rel_file": {"number_of_fragments" : 0}
     }
   },
+  {{ optional_search_after }}
   "sort": [
     {"_score": "desc"},
-    {"rel_file.keyword": "asc"}
+    {"_id": "desc"}
   ]
 }
 
