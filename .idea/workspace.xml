@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_body.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_body.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+            <state relative-caret-position="339">
+              <caret line="115" column="1" lean-forward="true" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -92,13 +92,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="next_button.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="next_button.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/next_button.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+            <state relative-caret-position="120">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#h2#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,14 +164,14 @@
         <option value="$PROJECT_DIR$/../elastic_local_indexer/index_pages.py" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/index_base_configuration.py" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/simple_search.py" />
-        <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/next_button.html" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/show_search_results.html" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json" />
+        <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/next_button.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="244" />
+    <option name="x" value="184" />
     <option name="y" value="23" />
     <option name="width" value="1187" />
     <option name="height" value="845" />
@@ -284,7 +285,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="244" y="23" width="1187" height="845" extended-state="0" />
+    <frame x="184" y="23" width="1187" height="845" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2555746" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -490,16 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/next_button.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/search_box.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -529,8 +521,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+        <state relative-caret-position="339">
+          <caret line="115" column="1" lean-forward="true" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/templates/next_button.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#h2#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
