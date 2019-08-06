@@ -1,0 +1,10 @@
+
+    <h2 style="text-align:center">Search in Elasticsearch index called {{ index_name }}
+    </h2>
+    <p style="text-align:center">Documents referenced at {{ input_files_root }}</p>
+    <h2 style="text-align:center">
+        <form method="POST">
+            <input type="text" name="search_text" value="{{ search_text }}" size="40">
+            <input type="submit" value="Search">
+        </form>
+    </h2>
