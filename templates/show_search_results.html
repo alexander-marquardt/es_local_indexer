@@ -19,7 +19,7 @@
             </h3>
             {% endif %}
 
-        
+
             <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
                 {% if page.highlight.rel_file %}
                     {{ page.highlight.rel_file.0|safe }}
