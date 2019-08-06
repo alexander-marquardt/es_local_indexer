@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_pages.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_pages.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/index_pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+            <state relative-caret-position="150">
+              <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
               <folding>
                 <element signature="e#19#32#0" expanded="true" />
               </folding>
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_base_configuration.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index_base_configuration.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/index_base_configuration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-149">
-              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="131">
+              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -161,15 +161,15 @@
         <option value="$PROJECT_DIR$/../elastic_local_indexer/presentation.py" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/show_search_results.html" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/templates/search_body.json" />
-        <option value="$PROJECT_DIR$/../elastic_local_indexer/index_base_configuration.py" />
         <option value="$PROJECT_DIR$/../elastic_local_indexer/index_pages.py" />
+        <option value="$PROJECT_DIR$/../elastic_local_indexer/index_base_configuration.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="351" />
-    <option name="y" value="41" />
-    <option name="width" value="1180" />
+    <option name="x" value="291" />
+    <option name="y" value="23" />
+    <option name="width" value="951" />
     <option name="height" value="845" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -281,10 +281,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="232" y="48" width="1180" height="845" extended-state="0" />
+    <frame x="431" y="36" width="1004" height="845" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2571182" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3031536" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -481,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/index_base_configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/globals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -497,11 +490,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/index_pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        <state relative-caret-position="150">
+          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
             <element signature="e#19#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../elastic_local_indexer/index_base_configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
         </state>
       </provider>
     </entry>
