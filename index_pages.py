@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import os, re
-import globals, common
+import globals, common, index_base_configuration
 from elasticsearch import Elasticsearch
 
 from bs4 import BeautifulSoup # library for parsing html
@@ -40,9 +40,8 @@ def extract_fields_from_html(body):
     }
 
 
-def main(parsed_args):
+def walk_and_index_all_files(base_dir):
     # traverse root directory, and list directories as dirs and files as files
-    base_dir = parsed_args.path
     for root, dirs, files in os.walk(base_dir):
         for file in files:
             if file.endswith(".html"):
@@ -59,9 +58,35 @@ def main(parsed_args):
                          body=json_to_index)
 
 
-if __name__ == '__main__':
+def configure_index():
+
+    index_name = globals.INDEX_NAME
+    index_exists = es.indices.exists(index=index_name)
+    if index_exists:
+        print("Index: %s already exists. Delete: yes (to overwrite) no (to append)" % index_name)
+        answer = input("Enter yes or no: ")
+        if answer == "yes":
+            es.indices.delete(index=index_name, ignore=[400, 404])
+            index_exists=False
+
+    # If the index doesn't exist, then write settings/mappings
+    if not index_exists:
+        request_body = {
+            'settings': index_base_configuration.INDEX_SETTINGS,
+            'mappings': index_base_configuration.INDEX_MAPPINGS
+        }
+        es.indices.create(index=index_name, body=request_body)
+
+
+def main():
+    configure_index()
     parsed_args = common.initial_setup()
-    main(parsed_args)
+    base_dir = parsed_args.path
+    walk_and_index_all_files(base_dir)
+
+
+if __name__ == '__main__':
+    main()
 
 
 
