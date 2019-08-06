@@ -40,34 +40,35 @@ def extract_fields_from_html(body):
     }
 
 
-def walk_and_index_all_files(base_dir):
+def walk_and_index_all_files(base_dir, index_name):
     # traverse root directory, and list directories as dirs and files as files
     for root, dirs, files in os.walk(base_dir):
         for file in files:
             if file.endswith(".html"):
                 rel_dir = os.path.relpath(root, base_dir)
                 rel_file = os.path.join(rel_dir, file)
-                print("indexing %s" % rel_file)
+                print("indexing %s from %s" % (index_name, rel_file))
 
                 abs_file_path = os.path.join(base_dir, rel_file)
                 infile = open(abs_file_path)
                 html_from_file = infile.read()
                 json_to_index = extract_fields_from_html(html_from_file)
                 json_to_index['rel_file'] = rel_file
-                es.index(index=globals.INDEX_NAME, id=None,
+                es.index(index=index_name, id=None,
                          body=json_to_index)
 
 
-def configure_index():
+def configure_index(index_name):
 
-    index_name = globals.INDEX_NAME
     index_exists = es.indices.exists(index=index_name)
     if index_exists:
-        print("Index: %s already exists. Delete: yes (to overwrite) no (to append)" % index_name)
-        answer = input("Enter yes or no: ")
-        if answer == "yes":
+        print("Index: %s already exists. Would you like to delete, append, or abort" % index_name)
+        answer = input("Type one of 'delete', 'append' or 'abort': ")
+        if answer == "delete":
             es.indices.delete(index=index_name, ignore=[400, 404])
-            index_exists=False
+            index_exists = False
+        elif answer == "abort":
+            exit(0)
 
     # If the index doesn't exist, then write settings/mappings
     if not index_exists:
@@ -79,10 +80,12 @@ def configure_index():
 
 
 def main():
-    configure_index()
     parsed_args = common.initial_setup()
     base_dir = parsed_args.path
-    walk_and_index_all_files(base_dir)
+    index_name = parsed_args.index_name
+    configure_index(index_name)
+
+    walk_and_index_all_files(base_dir, index_name)
 
 
 if __name__ == '__main__':

@@ -31,7 +31,7 @@ def my_form_post():
                            query_string=search_text,
                            optional_search_after=optional_search_after)
     print(body)
-    search_result = es.search(index=globals.INDEX_NAME, body=body)
+    search_result = es.search(index=app.config['index_name'], body=body)
     generated_html = presentation.present_results(
         search_text=search_text,
         input_files_root=app.config['input_files_root'],
@@ -52,7 +52,8 @@ def open_file(relative_path):
 def configure_global_app():
     parsed_args = common.initial_setup()
     app.config['input_files_root'] = parsed_args.path
-    print('Files root: ', app.config['input_files_root'])
+    app.config['index_name'] = parsed_args.index_name
+    print('Files root: %s. Index name: %s', app.config['input_files_root'], app.config['index_name'])
     return
 
 
