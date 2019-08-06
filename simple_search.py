@@ -13,7 +13,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def my_form():
-    return presentation.show_home_page(search_text='', input_files_root=app.config['input_files_root'])
+    return presentation.show_home_page(
+        search_text='',
+        index_name=app.config['index_name'],
+        input_files_root=app.config['input_files_root'])
 
 
 @app.route('/', methods=['POST'])
@@ -34,6 +37,7 @@ def my_form_post():
     search_result = es.search(index=app.config['index_name'], body=body)
     generated_html = presentation.present_results(
         search_text=search_text,
+        index_name=app.config['index_name'],
         input_files_root=app.config['input_files_root'],
         list_of_results=search_result['hits']['hits'])
 
