@@ -1,15 +1,15 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <title>Search results</title>
     </head>
-    <body>
+    <a>
         {% include 'search_box.html' %}
         {% for page in pages %}
 
 
             {% if page._source.title %}
             <h3>
-                <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
+                <a href = {{ url_for("open_file_on_filesystem", relative_path = page._source.rel_file) }} >
                 {% if page.highlight.title %}
                     {{ page.highlight.title.0|safe }}
                 {% else %}
@@ -20,7 +20,7 @@
             {% endif %}
 
 
-            <a href = {{ url_for("open_file", relative_path = page._source.rel_file) }} >
+            <a href = {{ url_for("open_file_on_filesystem", relative_path = page._source.rel_file) }} >
                 {% if page.highlight.rel_file %}
                     {{ page.highlight.rel_file.0|safe }}
                 {% else %}
@@ -34,8 +34,16 @@
             {% else %}
                 <p>{{ page._source.content|truncate(240) }}</p>
             {% endif %}
+
+
+            <a href = {{ url_for("show_cached_file_contents", _id = page._id) }} >
+                Show cached
+            </a><br>
+
             <p><em>score={{ page._score }}</em></p>
             <br>
+
+
 
             {% if loop.last %}
                {% include 'next_button.html' %}

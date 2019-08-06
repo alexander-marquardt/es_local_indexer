@@ -45,9 +45,17 @@ def my_form_post():
     return generated_html
 
 
-@app.route('/elastic_offline_search/<path:relative_path>')
-def open_file(relative_path):
+@app.route('/elastic_offline_search/original/<path:relative_path>')
+def open_file_on_filesystem(relative_path):
     return send_from_directory(app.config['input_files_root'], relative_path)
+
+
+@app.route('/elastic_offline_search/cached/<_id>')
+def show_cached_file_contents(_id):
+    es_doc = es.get(index=app.config['index_name'], id=_id)
+
+    return es_doc['_source']['content']
+
 
 
 
