@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_pages_app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index_pages_app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index_pages_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
               <folding>
                 <element signature="e#19#32#0" expanded="true" />
               </folding>
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
+            <state relative-caret-position="397">
               <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -174,10 +174,10 @@
         <option value="$PROJECT_DIR$/globals.py" />
         <option value="$PROJECT_DIR$/presentation.py" />
         <option value="$PROJECT_DIR$/simple_search.py" />
-        <option value="$PROJECT_DIR$/index_pages_app.py" />
         <option value="$PROJECT_DIR$/templates/show_search_results.html" />
         <option value="$PROJECT_DIR$/templates/show_search_results.html" />
         <option value="$PROJECT_DIR$/search_app.py" />
+        <option value="$PROJECT_DIR$/index_pages_app.py" />
       </list>
     </option>
   </component>
@@ -234,7 +234,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.simple_search">
+  <component name="RunManager" selected="Python.index_pages">
     <configuration name="index_pages" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="elastic_local_indexer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -277,8 +277,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.simple_search" />
         <item itemvalue="Python.index_pages" />
+        <item itemvalue="Python.simple_search" />
       </list>
     </recent_temporary>
   </component>
@@ -304,11 +304,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3435829" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3435829" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39973262" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -335,17 +335,23 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="app.config['input_files_root']" language="Python" />
         <watch expression="filename" language="Python" />
+        <watch expression="content" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>content</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>filename</expression-string>
         <language-id>Python</language-id>
@@ -608,16 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_pages_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="e#19#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/search_body.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -644,10 +640,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="397">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_pages_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding>
+            <element signature="e#19#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

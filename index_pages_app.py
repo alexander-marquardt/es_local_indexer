@@ -30,10 +30,9 @@ def extract_fields_from_html(body):
     except:
         title = ""
 
-    all_text = soup.findAll(text=True)
-    filtered_content = filter(tags_to_filter_out_for_just_content, all_text)
-    content = u" ".join(t for t in filtered_content)
-    content = re.sub('\s+', ' ', content)
+    [s.extract() for s in soup(['style', 'script'])]
+    visible_text = soup.getText()
+    content = re.sub('\s+', ' ', visible_text)
     return {
         "title": title,
         "content": content
