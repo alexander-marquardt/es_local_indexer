@@ -13,6 +13,7 @@ ES Local Indexer also relies on the following Python libraries:
 * [Elasticsearch python client](https://pypi.org/project/elasticsearch/) - For connecting to Elasticsearch.
 * [Beautiful soup](https://pypi.org/project/beautifulsoup4/) - For scraping html.
 * [Flask](https://pypi.org/project/Flask/) - Lightweight web application framework.
+
 Installation of these is covered in the next section.
 
 # Installation
