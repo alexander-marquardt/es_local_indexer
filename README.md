@@ -40,7 +40,7 @@ In order to ingest these documents, execute the following command replacing PATH
 ```
 python3 index_pages_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
-Once the ingestion process has started, you can move on to the next step (search results will be more meaningful if you wait for ingestion to complete).
+Once the ingestion process has started, you can move on to the next step (although search results will be more meaningful if you wait for ingestion to complete).
 
 # Searching local documents
 Once the documents have been ingested into Elasticsearch, the code to launch the search interface can be executed as follows: 
