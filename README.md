@@ -10,6 +10,9 @@ The code is written in Python3 and is tested on Mac OSX.
 Once you have downloaded the code, if you are running on OSX, then you can likely just enable the virtual environment and execute the code as follows:
 ```
 source venv/bin/activate
+```
+If the virtual environment has been sucessfully activated, then the following commands can be executed to check if the environment is configured correctly. 
+```
 python3 index_pages_app.py -h
 python3 search_app.py -h
 ```
@@ -37,7 +40,6 @@ For demonstration purposes, you may download offline Elasticsearch documentation
 In order to ingest these documents, execute the following command replacing PATH_TO_DOCS with the location of the documents that you wish to ingest, and INDEX_NAME with the name of the Elasticsearch index that will contain the information that has been ingested from the documents:
 ```
 python3 index_pages_app.py -p PATH_TO_DOCS -i INDEX_NAME
-
 ```
 Wait for the above process to complete before moving on to the next step.
 
