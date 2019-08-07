@@ -43,7 +43,7 @@ python3 index_pages_app.py -p PATH_TO_DOCS -i INDEX_NAME
 Wait for the above process to complete before moving on to the next step.
 
 # Searching local documents
-Once the documents have been ingested into Elasticsearch, they can be searched with the following command. 
+Once the documents have been ingested into Elasticsearch, the code to launch the search interface can be executed as follows: 
 ```
 python3 search_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
