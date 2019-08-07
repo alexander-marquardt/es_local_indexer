@@ -27,7 +27,10 @@
                 {% else %}
                     {{ page._source.relative_path_to_file }}
                 {% endif %}
-            </a><br>
+            </a>  &nbsp;
+            <a href = {{ url_for("show_cached_file_contents", _id = page._id) }} >
+               [View cached contents]
+            </a>
 
 
             {% if page.highlight.content %}
@@ -37,14 +40,8 @@
             {% endif %}
 
 
-            <a href = {{ url_for("show_cached_file_contents", _id = page._id) }} >
-                Show cached
-            </a><br>
-
-            <p><em>score={{ page._score }}</em></p>
-            <br>
-
-
+            <em>score={{ page._score }}</em>
+            <br><br>
 
             {% if loop.last %}
                {% include 'next_button.html' %}
