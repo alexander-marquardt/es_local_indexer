@@ -50,5 +50,5 @@ python3 searching_app.py -p PATH_TO_DOCS -i INDEX_NAME
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connct to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
 
 # Contributions
-Feel free to copy/fork/modify this code. The functionality provided here is bare-bones, and there is a lot of room for improvements. 
+Feel free to copy/fork/modify this code and contribute back. The functionality provided here is bare-bones, and there is a lot of room for improvements. 
 
