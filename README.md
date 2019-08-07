@@ -1,7 +1,7 @@
 # Introduction
-Elastic Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, Elastic Local Indexer allows you to index and search through a website that has been downloaded to your local disk for offline viewing. Once data from the website has been indexed into Elasticsearch, Elastic Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. Once the html has been ingested, Elastic Local Indexer will generate and display a search results page that links to the original html documents.
+ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, ES Local Indexer allows you to index and search through a website that has been downloaded to your local disk for offline viewing. Once data from the website has been indexed into Elasticsearch, ES Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. Once the html has been ingested, ES Local Indexer will generate and display a search results page that links to the original html documents.
 
-In order to ingest html documents into Elasticsearch and then search them, you just have to stat a local instance of Elasticsearch and then point Elastic Local Indexer at the directory to that contains the html documents! 
+In order to ingest html documents into Elasticsearch and then search them, you just have to stat a local instance of Elasticsearch and then point ES Local Indexer at the directory to that contains the html documents! 
 
 The code given in this project is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or fully production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
 
@@ -9,7 +9,7 @@ The code given in this project is intended to provide a base that can be used as
 
 The code is written in Python3 and is tested on Mac OSX. 
 
-Elastic Local Indexer also relies on the following Python libraries:
+ES Local Indexer also relies on the following Python libraries:
 * [Elasticsearch python client](https://pypi.org/project/elasticsearch/) - For connecting to Elasticsearch.
 * [Beautiful soup](https://pypi.org/project/beautifulsoup4/) - For scraping html.
 * [Flask](https://pypi.org/project/Flask/) - Lightweight web application framework.
@@ -58,5 +58,5 @@ python3 searching_app.py -p PATH_TO_DOCS -i INDEX_NAME
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connct to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
 
 # Contributions
-Feel free to copy/fork/modify this code and contribute back. The functionality provided here is bare-bones, and there is a lot of room for improvements. 
+The functionality provided here is bare-bones, and there is a lot of room for improvements. Feel free to copy/fork/modify this code and contribute back. 
 
