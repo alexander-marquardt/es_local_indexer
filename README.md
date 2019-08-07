@@ -1,7 +1,7 @@
 # Introduction
 Elastic Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing html documents from a local disk into Elasticsearch and then for searching through the ingested html documents. 
 
-In addition to providing an easy way to ingest the data (you just have to tell elastic_local_indexer where to look), this code also generates a google-like search results page. The code given here is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
+In order to ingest data you just have to tell Elastic Local Indexer where to look and start ingesting! Once data has been ingested, Elastic Local Indexer can generate a google-like search results page. The code given in this project is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
 
 The code is written in Python3 and is tested on Mac OSX. 
 
