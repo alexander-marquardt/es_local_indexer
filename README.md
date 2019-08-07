@@ -1,12 +1,22 @@
 # Introduction
-Elastic Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, Elastic Local Indexer implements functionality for indexing html documents from a local directory into Elasticsearch and provides a google-like interface for searching through the ingested html documents. 
+Elastic Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, Elastic Local Indexer allows you to index and search through a website that has been downloaded to your local disk for offline viewing. Once data from the website has been indexed, Elastic Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. Once the html has been ingested, Elastic Local Indexer will generate and display a search results page that links to the original html documents.
 
-In order to ingest data into Elasticsearch, you just have to tell Elastic Local Indexer where to look and it will start ingesting! Once data has been ingested, Elastic Local Indexer can generate a google-like search results page. The code given in this project is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
+In order to ingest html documents into Elasticsearch and then search them, you just have to stat a local instance of Elasticsearch and then point Elastic Local Indexer at the directory to that contains the html documents! 
+
+The code given in this project is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or fully production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
+
+# Requirements
 
 The code is written in Python3 and is tested on Mac OSX. 
 
+Elastic Local Indexer also relies on the following Python libraries:
+* [Elasticsearch python client](https://pypi.org/project/elasticsearch/) - For connecting to Elasticsearch.
+* [Beautiful soup](https://pypi.org/project/beautifulsoup4/) - For scraping html.
+* [Flask](https://pypi.org/project/Flask/) - Lightweight web application framework.
+Installation of these is covered in the next section.
+
 # Installation
-Once you have downloaded the code, if you are running on OSX, then you can likely enable the virtual environment as follows:
+We suggest using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the dependencies (listed in requirements.txt). If you are running on OSX, then you can likely enable the pre-built virtual environment as follows:
 ```
 source venv/bin/activate
 ```
@@ -16,9 +26,7 @@ python3 indexing_app.py -h
 python3 searching_app.py -h
 ```
 
-If you are not running on OSX or are unable to successfully execute the above commands, then you may optionally consider using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the dependencies (listed in requirements.txt). 
-
-In order to install required Python dependencies, execute 
+If you are not running on OSX or are unable to successfully execute the above commands, then you may need to install required Python dependencies. This can be done as follows: 
 ```
 pip3 install -r requirements.txt
 ```
@@ -29,14 +37,14 @@ python3 searching_app.py -h
 ```
 
 # Ensure Elasticsearch is installed and running
-This code will send data to a locally running Elasticsearch instance. It assumes that the server is running at localhost:9200 (you can change this in globals.py if necessary).
+This code will send data to a locally running Elasticsearch instance. It assumes that the Elasticsearch server is running at localhost:9200 (you can change this in globals.py if necessary).
 
 Installing and executing Elasticsearch is outside of the scope of this readme.
 
 # Ingesting local documents data into Elasticsearch
-For demonstration purposes, you may download offline Elasticsearch documentation in html form from: https://github.com/elastic/built-docs. Once you have downloaded the documents, they are ready for ingestion into Elasticsearch. 
+For demonstration purposes, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch. 
 
-In order to ingest these documents, execute the following command replacing PATH_TO_DOCS with the location of the documents that you wish to ingest, and INDEX_NAME with the name of the Elasticsearch index that will contain the information that has been ingested from the documents:
+In order to ingest the html documents, execute the following command replacing PATH_TO_DOCS with the path to the documentation directory, and INDEX_NAME with the name of the Elasticsearch index that will ingest the html from each page:
 ```
 python3 indexing_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
