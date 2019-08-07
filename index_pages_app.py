@@ -63,8 +63,8 @@ def configure_index(index_name):
     index_exists = es.indices.exists(index=index_name)
     if index_exists:
         print("Index: %s already exists. Would you like to delete, append, or abort" % index_name)
-        answer = input("Type one of 'delete', 'append' or 'abort': ")
-        if answer == "delete":
+        answer = input("Type one of 'overwrite', 'append' or 'abort': ")
+        if answer == "overwrite":
             es.indices.delete(index=index_name, ignore=[400, 404])
             index_exists = False
         elif answer == "abort":
