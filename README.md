@@ -17,7 +17,7 @@ ES Local Indexer also relies on the following Python libraries:
 Installation of these is covered in the next section.
 
 # Installation
-We suggest using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the dependencies (listed in requirements.txt). If you are running on OSX, then you can likely enable the pre-built virtual environment as follows:
+We suggest using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the required libraries. If you are running on OSX, then you can likely enable the pre-built virtual environment that includes required libraries as follows:
 ```
 source venv/bin/activate
 ```
