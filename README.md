@@ -1,5 +1,4 @@
-# Elastic Local Indexer
-## Introduction
+# Introduction
 Elastic Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing html documents from a local disk into Elasticsearch and then for searching through the ingested html documents. 
 
 In addition to providing an easy way to ingest the data (you just have to tell elastic_local_indexer where to look), this code also generates a google-like search results page. The code given here is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
@@ -50,5 +49,6 @@ python3 search_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connct to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
 
-
+# Contributions
+Feel free to copy/fork/modify this code. The functionality provided here is bare-bones, and there is a lot of room for improvements. 
 
