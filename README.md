@@ -48,7 +48,7 @@ Once the documents have been ingested into Elasticsearch, they can be searched w
 ```
 python3 search_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
-The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connct to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded.
+The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connct to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
 
 
 
