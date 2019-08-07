@@ -12,8 +12,8 @@ source venv/bin/activate
 ```
 If the virtual environment has been sucessfully activated, then the following commands can be executed to ensure that the environment is configured correctly. 
 ```
-python3 index_pages_app.py -h
-python3 search_app.py -h
+python3 indexing_app.py -h
+python3 searching_app.py -h
 ```
 
 If you are not running on OSX or are unable to successfully execute the above commands, then you may optionally consider using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the dependencies (listed in requirements.txt). 
@@ -24,8 +24,8 @@ pip3 install -r requirements.txt
 ```
 If the above was sucessfull, then you should be able to check if you code is functioning by executing the following commands:
 ```
-python3 index_pages_app.py -h
-python3 search_app.py -h
+python3 indexing_app.py -h
+python3 searching_app.py -h
 ```
 
 # Ensure Elasticsearch is installed and running
@@ -38,14 +38,14 @@ For demonstration purposes, you may download offline Elasticsearch documentation
 
 In order to ingest these documents, execute the following command replacing PATH_TO_DOCS with the location of the documents that you wish to ingest, and INDEX_NAME with the name of the Elasticsearch index that will contain the information that has been ingested from the documents:
 ```
-python3 index_pages_app.py -p PATH_TO_DOCS -i INDEX_NAME
+python3 indexing_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
 Once the ingestion process has started, you can move on to the next step (although search results will be more meaningful if you wait for ingestion to complete).
 
 # Searching local documents
 Once the documents have been ingested into Elasticsearch, the code to launch the search interface can be executed as follows: 
 ```
-python3 search_app.py -p PATH_TO_DOCS -i INDEX_NAME
+python3 searching_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connct to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
 
