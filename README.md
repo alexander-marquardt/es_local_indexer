@@ -1,23 +1,23 @@
 # Elastic Local Indexer
 ## Introduction
-This code is designed to show how Elasticsearch can be used for indexing data from a local disk into Elasticsearch and then searching data. This could be useful (for example) if you wish have documentation available _and_ searchable while you are offline.
+This code is designed to show how Elasticsearch can be used for indexing html documents from a local disk into Elasticsearch and then searching the ingested html documents. 
 
-The code given here is designed to provide a base that one can use for reference or to build upon, but this is not considered fully-featured or production-ready code. 
+In addition to providing an easy way to ingest the data (you just have to tell elastic_local_indexer where to look), this code also generates a google-like search results page. The code given here is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
 
 The code is written in Python3 and is tested on Mac OSX. 
 
 # Installation
-Once you have downloaded the code, if you are running on OSX, then you can likely just enable the virtual environment and execute the code as follows:
+Once you have downloaded the code, if you are running on OSX, then you can likely enable the virtual environment as follows:
 ```
 source venv/bin/activate
 ```
-If the virtual environment has been sucessfully activated, then the following commands can be executed to check if the environment is configured correctly. 
+If the virtual environment has been sucessfully activated, then the following commands can be executed to ensure that the environment is configured correctly. 
 ```
 python3 index_pages_app.py -h
 python3 search_app.py -h
 ```
 
-If you are not running on OSX or are unable to successfully execute the above commands, then you may consider installing a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid having to deal with system-wide installations. 
+If you are not running on OSX or are unable to successfully execute the above commands, then you may optionally consider using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the dependencies (listed in requirements.txt). 
 
 In order to install required Python dependencies, execute 
 ```
