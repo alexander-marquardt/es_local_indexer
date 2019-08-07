@@ -32,10 +32,11 @@ def extract_fields_from_html(body):
 
     [s.extract() for s in soup(['style', 'script'])]
     visible_text = soup.getText()
-    content = re.sub('\s+', ' ', visible_text)
+    visible_text = re.sub('[^\S\n]+', ' ', visible_text)
+    visible_text = re.sub('\n+', '\n', visible_text)
     return {
         "title": title,
-        "content": content
+        "content": visible_text
     }
 
 
@@ -45,14 +46,14 @@ def walk_and_index_all_files(base_dir, index_name):
         for file in files:
             if file.endswith(".html"):
                 rel_dir = os.path.relpath(root, base_dir)
-                rel_file = os.path.join(rel_dir, file)
-                print("indexing %s from %s" % (index_name, rel_file))
+                relative_path_to_file = os.path.join(rel_dir, file)
+                print("indexing %s from %s" % (index_name, relative_path_to_file))
 
-                abs_file_path = os.path.join(base_dir, rel_file)
+                abs_file_path = os.path.join(base_dir, relative_path_to_file)
                 infile = open(abs_file_path)
                 html_from_file = infile.read()
                 json_to_index = extract_fields_from_html(html_from_file)
-                json_to_index['rel_file'] = rel_file
+                json_to_index['relative_path_to_file'] = relative_path_to_file
                 es.index(index=index_name, id=None,
                          body=json_to_index)
 

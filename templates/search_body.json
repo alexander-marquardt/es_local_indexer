@@ -15,10 +15,10 @@
         },
         {
           "match_phrase": {
-            "rel_file": {
+            "relative_path_to_file": {
               "query": "{{query_string}}",
               "boost": 1,
-              "_name": "rel_file-phrase"
+              "_name": "relative_path_to_file-phrase"
             }
           }
         },
@@ -53,11 +53,11 @@
         },
         {
           "match": {
-            "rel_file": {
+            "relative_path_to_file": {
               "query": "{{query_string}}",
               "operator": "and",
               "boost": 1,
-              "_name": "rel_file-and"
+              "_name": "relative_path_to_file-and"
             }
           }
         },
@@ -83,11 +83,11 @@
         },
         {
           "match": {
-            "rel_file": {
+            "relative_path_to_file": {
               "query": "{{query_string}}",
               "operator": "or",
               "boost": 1,
-              "_name": "rel_file-or"
+              "_name": "relative_path_to_file-or"
             }
           }
         }
@@ -98,7 +98,7 @@
     "require_field_match": false,
     "fields": {
       "title": {"number_of_fragments" : 0, "pre_tags": ["<em>"], "post_tags": ["</em>"]},
-      "rel_file": {"number_of_fragments" : 0, "pre_tags": ["<b>"], "post_tags": ["</b>"]},
+      "relative_path_to_file": {"number_of_fragments" : 0, "pre_tags": ["<b>"], "post_tags": ["</b>"]},
       "content": {"number_of_fragments" : 5, "pre_tags": ["<b>"], "post_tags": ["</b>"]}
     }
   },

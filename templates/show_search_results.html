@@ -1,15 +1,16 @@
 <html xmlns="http://www.w3.org/1999/html">
     <head>
+        <meta charset="UTF-8">
         <title>Search results</title>
     </head>
-    <a>
+
+    <body>
         {% include 'search_box.html' %}
         {% for page in pages %}
 
-
             {% if page._source.title %}
             <h3>
-                <a href = {{ url_for("open_file_on_filesystem", relative_path = page._source.rel_file) }} >
+                <a href = {{ url_for("open_file_on_filesystem", relative_path = page._source.relative_path_to_file) }} >
                 {% if page.highlight.title %}
                     {{ page.highlight.title.0|safe }}
                 {% else %}
@@ -20,11 +21,11 @@
             {% endif %}
 
 
-            <a href = {{ url_for("open_file_on_filesystem", relative_path = page._source.rel_file) }} >
-                {% if page.highlight.rel_file %}
-                    {{ page.highlight.rel_file.0|safe }}
+            <a href = {{ url_for("open_file_on_filesystem", relative_path = page._source.relative_path_to_file) }} >
+                {% if page.highlight.relative_path_to_file %}
+                    {{ page.highlight.relative_path_to_file.0|safe }}
                 {% else %}
-                    {{ page._source.rel_file }}
+                    {{ page._source.relative_path_to_file }}
                 {% endif %}
             </a><br>
 

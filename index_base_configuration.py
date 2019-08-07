@@ -38,7 +38,7 @@ INDEX_MAPPINGS = {
             "type": "text",
             "analyzer": "my_custom_analyzer",
         },
-        "rel_file": {
+        "relative_path_to_file": {
             "type": "text",
             "analyzer": "my_custom_analyzer",
             "fields": {

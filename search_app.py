@@ -53,9 +53,8 @@ def open_file_on_filesystem(relative_path):
 @app.route('/elastic_offline_search/cached/<_id>')
 def show_cached_file_contents(_id):
     es_doc = es.get(index=app.config['index_name'], id=_id)
-
-    return es_doc['_source']['content']
-
+    return render_template("cached_text.html",
+                           cached_text = es_doc['_source']['content'])
 
 
 
