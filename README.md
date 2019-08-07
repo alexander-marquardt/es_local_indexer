@@ -1,9 +1,9 @@
 # Introduction
-ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, ES Local Indexer allows you to index and search through a website that has been downloaded to your local disk for offline viewing. Once data from the website has been indexed into Elasticsearch, ES Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. Once the html has been ingested, ES Local Indexer will generate and display a search results page that links to the original html documents.
+ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, ES Local Indexer allows you to index and search through a website that has been downloaded to local storage for offline viewing. Once data from the website has been indexed into Elasticsearch, ES Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. After the html has been ingested, ES Local Indexer can generate and display a search results page that links to the original html documents.
 
-In order to ingest html documents into Elasticsearch and then search them, you just have to stat a local instance of Elasticsearch and then point ES Local Indexer at the directory to that contains the html documents! 
+In order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch and then point ES Local Indexer at the directory to that contains the html documents! 
 
-The code given in this project is intended to provide a base that can be used as a reference or to build upon -- this is not considered fully-featured or fully production-ready code. Nevertheless, this code would be useful if one has a need to search documents while offline. 
+The code given in this project is intended to provide a base that can be used as a reference or to build upon -- I do not consider ES Local Indexer to fully-featured or fully production-ready code. Nevertheless, ES Local Indexer would be useful if one has a need to search documents while offline. 
 
 # Requirements
 
