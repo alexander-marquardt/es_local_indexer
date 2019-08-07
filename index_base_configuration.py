@@ -1,4 +1,9 @@
+"""
+Define the base index settings and mappings in this file.
 
+Note that in the settings below, we use the english stemmer, which may not be appropriate for
+other languages.
+"""
 INDEX_SETTINGS = {
     'index': {
         'refresh_interval': '1s',

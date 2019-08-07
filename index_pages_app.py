@@ -1,4 +1,10 @@
-#!/usr/bin/python
+"""
+This is the main python script for indexing local html documents into Elasticsearch.
+
+This code is written in Python3 syntax.
+
+See the README or execute with -h to see expected parameters
+"""
 
 import os, re
 import globals, common, index_base_configuration
@@ -19,17 +25,24 @@ def tags_to_filter_out_for_just_content(element):
     return True
 
 
-# Get the title and text content from the html (ie. strip out scripts, comments, etc.)
-def extract_fields_from_html(body):
-    soup = BeautifulSoup(body, 'html.parser')
+def extract_fields_from_html(html_body):
+    """Receives html and removes all the tags, scripts, etc.
 
-    # Some pages just redirect to others, and so might not have a title set
+
+    Keyword arguments:
+    html_body -- the html that we will be cleaning up
+    """
+    soup = BeautifulSoup(html_body, 'html.parser')
+
+    # Get the title from the html. However, some pages just redirect to others,
+    # and so might not have a title set
     try:
         title = soup.title.contents[0]
         title = re.sub('\s+', ' ', title)
     except:
         title = ""
 
+    # Remove styles and scripts from the html for ingestion into the contents
     [s.extract() for s in soup(['style', 'script'])]
     visible_text = soup.getText()
     visible_text = re.sub('[^\S\n]+', ' ', visible_text)
@@ -40,16 +53,23 @@ def extract_fields_from_html(body):
     }
 
 
-def walk_and_index_all_files(base_dir, index_name):
-    # traverse root directory, and list directories as dirs and files as files
-    for root, dirs, files in os.walk(base_dir):
+def walk_and_index_all_files(input_files_root, index_name):
+    """Walks the directory tree starting at base_dir, and ingests each html document that
+    is encountered into an Elasticsearch index
+
+    Keyword arguments:
+    index_name -- name of the index that will be used
+    input_files_root -- the base directory which the html files reside in
+    """
+
+    for root, dirs, files in os.walk(input_files_root):
         for file in files:
             if file.endswith(".html"):
-                rel_dir = os.path.relpath(root, base_dir)
+                rel_dir = os.path.relpath(root, input_files_root)
                 relative_path_to_file = os.path.join(rel_dir, file)
                 print("indexing %s from %s" % (index_name, relative_path_to_file))
 
-                abs_file_path = os.path.join(base_dir, relative_path_to_file)
+                abs_file_path = os.path.join(input_files_root, relative_path_to_file)
                 infile = open(abs_file_path)
                 html_from_file = infile.read()
                 json_to_index = extract_fields_from_html(html_from_file)
@@ -59,7 +79,12 @@ def walk_and_index_all_files(base_dir, index_name):
 
 
 def configure_index(index_name):
+    """Ensures that settings and mappings are defined on the Elasticsearch
+     index that we will write our documents into.
 
+    Keyword arguments:
+    index_name -- name of the index that will be used
+    """
     index_exists = es.indices.exists(index=index_name)
     if index_exists:
         print("Index: %s already exists. Would you like to delete, append, or abort" % index_name)
@@ -80,7 +105,9 @@ def configure_index(index_name):
 
 
 def main():
-    parsed_args = common.initial_setup()
+    """Get the command line arguments, and start indexing documents into Elaseticsearch
+    """
+    parsed_args = common.parse_arguments()
     base_dir = parsed_args.path
     index_name = parsed_args.index_name
     configure_index(index_name)
