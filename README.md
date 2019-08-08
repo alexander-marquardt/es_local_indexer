@@ -44,7 +44,12 @@ python3 searching_app.py -h
 # Ensure Elasticsearch is installed and running
 This code will send data to a locally running Elasticsearch instance. It assumes that the Elasticsearch server is running at localhost:9200 (you can change this in globals.py if necessary).
 
-Installing and executing Elasticsearch is outside of the scope of this readme.
+The installation instructions below have been tested on OSX. 
+
+1. First [download Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html). 
+2. Uncompress the downloaded  file as instructed.
+3. "cd" to ensure that you are working in the uncompressed directory.
+4. Run Elasticsearch from the command line: "./bin/elasticsearch"
 
 # Ingesting local documents data into Elasticsearch
 For demonstration purposes, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch. 
