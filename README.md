@@ -63,6 +63,10 @@ python3 searching_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connect to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
 
+# How does the UI look
+ES Local Indexer provides an HTML-based UI that shows search results and highlights matching words. 
+![ES Local Indexer screenshot](https://alexmarquardtcom.files.wordpress.com/2019/08/screenshot-2019-08-07-at-22.06.21.png)
+
 # Contributions
 The functionality provided here is bare-bones, and there is a lot of room for improvements. Feel free to copy/fork/modify this code and contribute back. 
 
