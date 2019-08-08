@@ -1,5 +1,5 @@
 # Introduction
-ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. This involves two main components:
+ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. This is composed of two main components:
 1. The indexing_app - This walks through all of the documents that will be indexed into Elasticserach.
 2. The searching_app - this will generate and display the Google-like search results. 
 
