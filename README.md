@@ -1,5 +1,9 @@
 # Introduction
-ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. Specifically, ES Local Indexer allows you to index and search through a website that has been downloaded to local storage for offline viewing. Once data from the website has been indexed into Elasticsearch, ES Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. After the html has been ingested, ES Local Indexer can generate and display a search results page that links to the original html documents.
+ES Local Indexer is designed to demonstrate how Elasticsearch can be used for indexing data and searching through that data. This involves two main components:
+1. The indexing_app - This walks through all of the documents that will be indexed into Elasticserach.
+2. The searching_app - this will generate and display the Google-like search results. 
+
+For example, ES Local Indexer allows you to index and search through a website that has been downloaded to local storage for offline viewing. Once data from the website has been indexed into Elasticsearch, ES Local Indexer provides a Google-like interface for searching within the ingested web pages/html documents. After the html has been ingested, ES Local Indexer can generate and display a search results page that links to the original html documents.
 
 In order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch and then point ES Local Indexer at the directory to that contains the html documents! 
 
