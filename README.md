@@ -72,5 +72,5 @@ ES Local Indexer provides an HTML-based UI that shows search results and highlig
 ![ES Local Indexer screenshot](https://alexmarquardtcom.files.wordpress.com/2019/08/screenshot-2019-08-07-at-22.06.21.png)
 
 # Contributions
-The functionality provided here is bare-bones, and there is a lot of room for improvements. Feel free to copy/fork/modify this code and contribute back. 
+ES Local Indexer was written by Alexander Marquardt. The functionality provided is bare-bones, and there is a lot of room for improvements. Feel free to copy/fork/modify this code and contribute back. 
 
