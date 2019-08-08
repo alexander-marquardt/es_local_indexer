@@ -9,10 +9,9 @@ ES Local Indexer is simple to use. In order to ingest html documents into Elasti
 The ES Local Indexer project is intended for the following scenarios:
 
 * It can be used as a reference for implementing search functionality within larger project or as a base for implementing a full-featured search application.
-* It can be used for indexing previously downloaded html documents, and providing search capabilities across those documents. This could be useful for example if one knows they will not have internet access for some amount of time (such as while on an airplane), and need to be able to search downloaded documents.
+* It can be used for indexing previously downloaded html documents, and providing search capabilities across those documents.
 
-ES Local Indexer is not fully-featured or production-ready and is currently intended to be used locally (i.e. not exposed to the internet). In order to keep the code simple I have not used any Javascript or CSS on the front end. A production application based on this code would likely add both CSS and Javascript to improve the user experience.
-
+ES Local Indexer is not fully-featured or production-ready and is currently intended to be used locally (i.e. not exposed to the internet).
 
 # Related blog article
 See [this blog article](https://alexmarquardt.com/es-local-indexer-using-elasticsearch-for-searching-locally-stored-documents/) for a general overview about ES Local Indexer.
