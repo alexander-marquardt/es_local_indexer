@@ -14,7 +14,7 @@ The ES Local Indexer project is intended for the following scenarios:
 ES Local Indexer is not fully-featured or production-ready and is currently intended to be used locally (i.e. not exposed to the internet).
 
 # Related blog article
-See [this blog article](https://alexmarquardt.com/es-local-indexer-using-elasticsearch-for-searching-locally-stored-documents/) for a general overview about ES Local Indexer.
+See [this blog article](https://alexmarquardt.com/es-local-indexer-desktop-search-built-with-elasticsearch/) for a general overview about ES Local Indexer.
 
 # Requirements
 
