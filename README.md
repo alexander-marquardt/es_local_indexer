@@ -52,7 +52,7 @@ The installation instructions below have been tested on OSX. 
 4. Run Elasticsearch from the command line: "./bin/elasticsearch"
 
 # Ingesting local documents data into Elasticsearch
-For demonstration purposes, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch. 
+To test this code with real documents, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch. 
 
 In order to ingest the html documents, execute the following command replacing PATH_TO_DOCS with the path to the documentation directory, and INDEX_NAME with the name of the Elasticsearch index that will ingest the html from each page:
 ```
