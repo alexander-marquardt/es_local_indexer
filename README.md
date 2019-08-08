@@ -7,7 +7,7 @@ For example, ES Local Indexer allows you perform an offline search through a web
 
 The code given in this project is intended to provide a base that can be used as a reference, that can be enhanced to add new functionality, or that can be tuned to improve search results -- I do not consider ES Local Indexer to fully-featured or fully production-ready code. In order to keep the code simple I have not used any Javascript or CSS on the front end. A production application based on this code would likely add both CSS and Javascript to improve the user experience.
 
-Nevertheless, even in its current bare-bones form, ES Local Indexer would be useful if one has a need to be able to search previously downloaded documents while they are offline.  In order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch and then point ES Local Indexer at the directory to that contains the html documents! 
+Nevertheless, even in its current bare-bones form, ES Local Indexer would be useful if one has a need to be able to search previously downloaded documents while they are offline.  ES Local Indexer is simple to use -- in order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch and start ingesting data with the "indexing app". 
 
 # Requirements
 
