@@ -3,11 +3,11 @@ ES Local Indexer is a system that indexes data into Elasticsearch and that provi
 1. The "indexing app" - indexes all documents in a given directory tree into Elasticsearch.
 2. The "searching app" - will generate and display the search-engine-like search results. 
 
-For example, ES Local Indexer allows you perform an offline search through a website that has been downloaded to local storage. The "indexing app" will first index the downloaded html into Elasticsearch, and the "searching app" provides a search-engine-like interface for searching within the ingested web pages.
+ES Local Indexer is simple to use. In order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch, ingest data into Elasticsearch with the "indexing app", and then start the "searching app" to search through the ingested data. 
 
-The code given in this project is intended to provide a base that can be used as a reference, that can be enhanced to add new functionality, or that can be tuned to improve search results -- I do not consider ES Local Indexer to fully-featured or fully production-ready code. In order to keep the code simple I have not used any Javascript or CSS on the front end. A production application based on this code would likely add both CSS and Javascript to improve the user experience.
+The code given in this project is intended to provide a base that can be used as a reference, that can be enhanced to add new functionality, or that can be tuned to improve search results -- ES Local Indexer is not fully-featured or fully production-ready code. In order to keep the code simple I have not used any Javascript or CSS on the front end. A production application based on this code would likely add both CSS and Javascript to improve the user experience.
 
-Nevertheless, even in its current bare-bones form, ES Local Indexer would be useful if one has a need to be able to search previously downloaded documents while they are offline.  ES Local Indexer is simple to use -- in order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch and start ingesting data with the "indexing app". 
+Nevertheless, even in its current bare-bones form, ES Local Indexer would be useful if one has a need to be able to search previously downloaded documents while offline. 
 
 # Requirements
 
