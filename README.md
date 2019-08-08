@@ -6,9 +6,13 @@ ES Local Indexer is a system that indexes data into Elasticsearch and that provi
 ES Local Indexer is simple to use. In order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch, ingest data into Elasticsearch with the "indexing app", and then start the "searching app". You then use your browser to connect to the "searching app" to search through the ingested data. 
 
 # Purpose
-The code given in this project is intended to provide a base that can be used as a reference, that can be enhanced to add new functionality, or that can be tuned to improve search results -- ES Local Indexer is not fully-featured or fully production-ready code. In order to keep the code simple I have not used any Javascript or CSS on the front end. A production application based on this code would likely add both CSS and Javascript to improve the user experience.
+The ES Local Indexer project is intended for the following scenarios:
 
-Nevertheless, even in its current bare-bones form, ES Local Indexer would be useful if one has a need to be able to search previously downloaded documents while offline. 
+* It can be used as a reference for implementing search functionality within larger project or as a base for implementing a full-featured search application.
+* It can be used for indexing previously downloaded html documents, and providing search capabilities across those documents. This could be useful for example if one knows they will not have internet access for some amount of time (such as while on an airplane), and need to be able to search downloaded documents.
+
+ES Local Indexer is not fully-featured or production-ready and is currently intended to be used locally (i.e. not exposed to the internet). In order to keep the code simple I have not used any Javascript or CSS on the front end. A production application based on this code would likely add both CSS and Javascript to improve the user experience.
+
 
 # Related blog article
 See [this blog article](https://alexmarquardt.com/es-local-indexer-using-elasticsearch-for-searching-locally-stored-documents/) for a general overview about ES Local Indexer.
