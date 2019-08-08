@@ -1,5 +1,5 @@
 # Introduction
-ES Local Indexer is a system that indexes data into Elasticsearch, and that generates an intuitive interface for searching through the ingested data. The ES Local Indexer project is composed of two main components:
+ES Local Indexer is a system that indexes data into Elasticsearch and that generates an intuitive interface for searching through the ingested data. The ES Local Indexer project is composed of two main components:
 1. The "indexing app" - walks through all of the documents that will be indexed into Elasticserach.
 2. The "searching app" - will generate and display the search-engine-like search results. 
 
