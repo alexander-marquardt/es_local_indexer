@@ -21,6 +21,8 @@ ES Local Indexer also relies on the following Python libraries:
 Installation of these is covered in the next section.
 
 # Installation
+ES Local Indexer relies on Elasticsearch for core search functionality. If you have not yet done so, follow instructions for [installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+
 We suggest using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the required libraries. If you are running on OSX, then you can likely enable the pre-built virtual environment that includes required libraries as follows:
 ```
 source venv/bin/activate
@@ -43,13 +45,6 @@ python3 searching_app.py -h
 
 # Ensure Elasticsearch is installed and running
 This code will send data to a locally running Elasticsearch instance. It assumes that the Elasticsearch server is running at localhost:9200 (you can change this in globals.py if necessary).
-
-The installation instructions below have been tested on OSX. 
-
-1. First [download Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html). 
-2. Uncompress the downloaded  file as instructed.
-3. "cd" to ensure that you are working in the uncompressed directory.
-4. Run Elasticsearch from the command line: "./bin/elasticsearch"
 
 # Ingesting local documents data into Elasticsearch
 To test this code with real documents, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch. 
