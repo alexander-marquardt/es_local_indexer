@@ -28,7 +28,7 @@ ES Local Indexer also relies on the following Python libraries:
 Installation of these is covered in the next section.
 
 # Installation of Elasticsearch
-ES Local Indexer relies on Elasticsearch for core search functionality. If you have not yet done so, follow instructions for [installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).The code assumes that the Elasticsearch server is running at localhost:9200, and you can change this in globals.py if necessary.
+ES Local Indexer relies on Elasticsearch for core search functionality. If you have not yet done so, follow instructions for [installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html). The code assumes that the Elasticsearch server is running at localhost:9200, and you can change this in globals.py if necessary.
 
 # Installation of Python dependencies
 We suggest using a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to avoid system-wide installation of the required libraries. If you are running on OSX, then you can likely enable the pre-built virtual environment that includes required libraries as follows:
