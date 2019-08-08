@@ -1,3 +1,6 @@
+# Related blog article
+See [this blog article](https://alexmarquardt.com/es-local-indexer-using-elasticsearch-for-searching-locally-stored-documents/) for a general overview about ES Local Indexer.
+
 # Introduction
 ES Local Indexer is a system that indexes data into Elasticsearch and that provides an intuitive browser-based interface for searching and paging through the ingested data. The ES Local Indexer project consists of two main components:
 1. An "indexing app" - indexes all documents in a given directory tree into Elasticsearch.
@@ -59,8 +62,6 @@ Once the documents have been ingested into Elasticsearch, the code to launch the
 python3 searching_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connect to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
-
-Keep in mind that this application has not been specially tuned or configured for presenting the Elasticsearch documentation. Therefore the search results may not be exactly as one might expect - for example, if you search for the words "ingest nodes", you will received several results which appear to be nearly identical. This is because each release of Elasticsearch may have nearly identical documentation, and we have ingested all of the documentation for all versions of Elasticsearch. Furthermore we have not added any filtering for a specific version. If this application were designed for only presenting Elasticsearch documentation, we would likely add a "version" dropdown along with a [bool filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/query-dsl-bool-query.html) to ensure that only documentation from a single version of Elasticsearch would be presented for any given search. 
 
 # Contributions
 The functionality provided here is bare-bones, and there is a lot of room for improvements. Feel free to copy/fork/modify this code and contribute back. 
