@@ -45,7 +45,7 @@ python3 searching_app.py -h
 ```
 
 # Ingesting local documents data into Elasticsearch
-To test this code with real documents, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch. 
+To test this code with real documents, you may download offline Elasticsearch documentation in html form from https://github.com/elastic/built-docs. Once you have downloaded the documentation, the html documents are ready for ingestion into Elasticsearch.
 
 In order to ingest the html documents, execute the following command replacing PATH_TO_DOCS with the path to the documentation directory, and INDEX_NAME with the name of the Elasticsearch index that will ingest the html from each page:
 ```
@@ -59,6 +59,8 @@ Once the documents have been ingested into Elasticsearch, the code to launch the
 python3 searching_app.py -p PATH_TO_DOCS -i INDEX_NAME
 ```
 The PATH_TO_DOCS and INDEX_NAME should be the same as the values specified when ingesting the documents into Elasticsearch. This will allow you to connect to http://127.0.0.1:5000/ with your web browser, and to begin searching the documents that you previously downloaded and indexed into Elasticsearch.
+
+Keep in mind that this application has not been specially tuned or configured for the Elastic html documentation. Therefore the search results may not be exactly as you might expect - for example, if you search for the words "ingest nodes", you will received what appear to be several pages of results which appear to be nearly identical. This is because we have ingested all of the documentation for all versions of Elasticsearch, and we have not added any filtering for a specific version. If this application were targetted only for presenting Elasticsearch documentation, we would likely add a "version" dropdown along with a [bool filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/query-dsl-bool-query.html) to ensure that only documentation from a single version of Elasticsearch is presented for any given search. 
 
 # Contributions
 The functionality provided here is bare-bones, and there is a lot of room for improvements. Feel free to copy/fork/modify this code and contribute back. 
