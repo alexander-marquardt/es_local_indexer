@@ -1,6 +1,6 @@
 # Introduction
 ES Local Indexer is a desktop search application that indexes data into Elasticsearch and that provides an intuitive browser-based interface for searching and paging through the ingested data. The ES Local Indexer project consists of two main components:
-1. An "indexing app" - indexes all documents in a given directory tree into Elasticsearch.
+1. An "indexing app" - indexes html documents in a given directory tree into Elasticsearch.
 2. A "searching app" - generates and displays the search-engine-like search results. 
 
 ES Local Indexer is simple to use. In order to ingest html documents into Elasticsearch and then search them, you just have to start a local instance of Elasticsearch, ingest data into Elasticsearch with the "indexing app", and then start the "searching app". You then use your browser to connect to the "searching app" to search through the ingested data. 
