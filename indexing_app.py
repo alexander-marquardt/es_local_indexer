@@ -17,7 +17,8 @@ es = Elasticsearch([globals.ES_HOST], http_auth=(globals.ES_USER, globals.ES_PAS
 
 
 def extract_fields_from_html(html_body):
-    """Receives html and removes all the tags, scripts, etc.
+    """Receives html and removes styles and scripts 
+    (could be easily modified to remove more if necessary).
 
 
     Keyword arguments:
