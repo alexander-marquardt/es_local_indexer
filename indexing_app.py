@@ -17,7 +17,7 @@ es = Elasticsearch([globals.ES_HOST], http_auth=(globals.ES_USER, globals.ES_PAS
 
 
 def extract_fields_from_html(html_body):
-    """Receives html and removes styles and scripts 
+    """Receives html and removes styles and scripts
     (could be easily modified to remove more if necessary).
 
 
@@ -37,7 +37,13 @@ def extract_fields_from_html(html_body):
     # Remove styles and scripts from the html for ingestion into the contents
     [s.extract() for s in soup(['style', 'script'])]
     visible_text = soup.getText()
+
+    # The following lines cleanup the text for better display when "View indexed content"
+    # is selected. This leaves in a single newline when multiple \n are encountered.
+    #
+    # Replace multiple spaces with a single space, but leave newlines in for now
     visible_text = re.sub('[^\S\n]+', ' ', visible_text)
+    # Replace multiple sequential newlines with a single newline
     visible_text = re.sub('\n+', '\n', visible_text)
     return {
         "title": title,
