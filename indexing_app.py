@@ -16,15 +16,6 @@ from bs4.element import Comment
 es = Elasticsearch([globals.ES_HOST], http_auth=(globals.ES_USER, globals.ES_PASSWORD))
 
 
-# Specify the fields that we want removed from the html
-def tags_to_filter_out_for_just_content(element):
-    if element.parent.name in ['style', 'script', 'head', 'meta', '[document]', 'title']:
-        return False
-    if isinstance(element, Comment):
-        return False
-    return True
-
-
 def extract_fields_from_html(html_body):
     """Receives html and removes all the tags, scripts, etc.
 
